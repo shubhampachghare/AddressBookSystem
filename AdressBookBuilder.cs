@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AdressBookSystem
@@ -7,43 +8,58 @@ namespace AdressBookSystem
     class AdressBookBuilder : IContacts
     {
         public List<Contact> contactList;
+
         public AdressBookBuilder()
         {
             this.contactList = new List<Contact>();
         }
 
-        public void addContact(String fName, String lName, String address, String city, String state, String zip, String phoneNumber, String email)
+        public void addContact(String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber, String email)
         {
-            Contact contact = new Contact(fName, lName, address, city, state, zip, phoneNumber, email);
-            contactList.Add(contact);
+            bool duplicate = equals(firstName);
+            if (!duplicate)
+            {
+                Contact contact = new Contact(firstName, lastName, address, city, state, zip, phoneNumber, email);
+                contactList.Add(contact);
+            }
+            else
+            {
+                Console.WriteLine("Cannot add duplicate contacts first name");
+            }
         }
 
-        public void editContact(string fName)
+        private bool equals(string firstName)
         {
+            if (this.contactList.Any(e => e.firstName == firstName))
+                return true;
+            else
+                return false;
+        }
 
+        public void editContact(string firstName)
+        {
             int flag = 1;
             foreach (Contact contact in contactList)
             {
-                if (fName.Equals(contact.fName))
+                if (firstName.Equals(contact.firstName))
                 {
                     flag = 0;
                     Console.WriteLine("Enter last name = ");
-                    string lName = Console.ReadLine();
+                    contact.lastName = Console.ReadLine();
                     Console.WriteLine("Enter address= ");
-                    String address = Console.ReadLine();
+                    contact.address = Console.ReadLine();
                     Console.WriteLine("Enter city= ");
-                    String city = Console.ReadLine();
+                    contact.city = Console.ReadLine();
                     Console.WriteLine("Enter state= ");
-                    String state = Console.ReadLine();
+                    contact.state = Console.ReadLine();
                     Console.WriteLine("Enter zip= ");
-                    String zip = Console.ReadLine();
+                    contact.zip = Console.ReadLine();
                     Console.WriteLine("Enter phoneNumber= ");
-                    String phoneNumber = Console.ReadLine();
+                    contact.phoneNumber = Console.ReadLine();
                     Console.WriteLine("Enter email= ");
-                    String email = Console.ReadLine();
+                    contact.email = Console.ReadLine();
                     break;
                 }
-
             }
             if (flag == 1)
             {
@@ -51,12 +67,12 @@ namespace AdressBookSystem
             }
         }
 
-        public void deleteContact(string fName)
+        public void deleteContact(string firstName)
         {
             int flag = 1;
             foreach (Contact contact in contactList)
             {
-                if (fName.Equals(contact.fName))
+                if (firstName.Equals(contact.firstName))
                 {
                     flag = 0;
                     contactList.Remove(contact);
@@ -74,15 +90,14 @@ namespace AdressBookSystem
         {
             foreach (Contact contact in contactList)
             {
-                Console.WriteLine("\nFirst name = " + contact.fName);
-                Console.WriteLine("Last name = " + contact.lName);
+                Console.WriteLine("\nFirst name = " + contact.firstName);
+                Console.WriteLine("Last name = " + contact.lastName);
                 Console.WriteLine("Address = " + contact.address);
                 Console.WriteLine("city = " + contact.city);
                 Console.WriteLine("state = " + contact.state);
                 Console.WriteLine("zip = " + contact.zip);
                 Console.WriteLine("phoneNumber = " + contact.phoneNumber);
                 Console.WriteLine("email = " + contact.email);
-
             }
         }
     }

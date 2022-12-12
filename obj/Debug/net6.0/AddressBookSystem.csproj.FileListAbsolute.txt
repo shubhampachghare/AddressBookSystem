@@ -1,0 +1,15 @@
+C:\RFP-231-Assg\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.exe
+C:\RFP-231-Assg\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.deps.json
+C:\RFP-231-Assg\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.runtimeconfig.json
+C:\RFP-231-Assg\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.dll
+C:\RFP-231-Assg\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.pdb
+C:\RFP-231-Assg\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.csproj.AssemblyReference.cache
+C:\RFP-231-Assg\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\RFP-231-Assg\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.AssemblyInfoInputs.cache
+C:\RFP-231-Assg\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.AssemblyInfo.cs
+C:\RFP-231-Assg\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.csproj.CoreCompileInputs.cache
+C:\RFP-231-Assg\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.dll
+C:\RFP-231-Assg\AddressBookSystem\obj\Debug\net6.0\refint\AddressBookSystem.dll
+C:\RFP-231-Assg\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.pdb
+C:\RFP-231-Assg\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.genruntimeconfig.cache
+C:\RFP-231-Assg\AddressBookSystem\obj\Debug\net6.0\ref\AddressBookSystem.dll
